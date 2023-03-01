@@ -4,11 +4,11 @@
 
 3. Build the Docker images by running the following command:
 
-`docker-compose build`
+    `docker-compose build`
 
 4. Once the build is complete, start the containers by running:
 
-`docker-compose up`
+    `docker-compose up`
 
 5. The MySQL database and Airflow webserver should now be running in their respective containers. You can access the Airflow web interface by navigating to http://localhost:8080 in your web browser.
 
@@ -30,4 +30,4 @@
 
 7. To stop the containers, use the following command:
 
-`docker-compose down`
+    `docker-compose down`
