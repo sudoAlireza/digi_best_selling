@@ -1,0 +1,136 @@
+swagger: '2.0'
+info:
+  title: Product Analysis API
+  description: APIs for analyzing product pricing data
+  version: '1.0'
+basePath: /
+schemes:
+  - http
+paths:
+  /:
+    get:
+      summary: Home Page
+      description: Returns the home page of the API
+      responses:
+        '200':
+          description: Success
+          content:
+            text/html:
+              schema:
+                type: string
+  /analysis/main_category:
+    get:
+      summary: Main Category Analysis
+      description: Returns the main category analysis of the product pricing data
+      responses:
+        '200':
+          description: Success
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                main_category:
+                  type: string
+                num_products:
+                  type: integer
+                avg_rating:
+                  type: number
+                avg_rate_count:
+                  type: number
+                avg_comment_count:
+                  type: number
+  /analysis/sub_category:
+    get:
+      summary: Sub Category Analysis
+      description: Returns the sub category analysis of the product pricing data
+      responses:
+        '200':
+          description: Success
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                sub_category:
+                  type: string
+                num_products:
+                  type: integer
+                avg_rating:
+                  type: number
+                avg_rate_count:
+                  type: number
+                avg_comment_count:
+                  type: number
+  /analysis/price:
+    get:
+      summary: Price Analysis
+      description: Returns the price analysis of the product pricing data
+      responses:
+        '200':
+          description: Success
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                first_price:
+                  type: number
+                last_price:
+                  type: number
+                num_products:
+                  type: integer
+                avg_rating:
+                  type: number
+                avg_rate_count:
+                  type: number
+                avg_comment_count:
+                  type: number
+  /analysis/rating:
+    get:
+      summary: Rating Analysis
+      description: Returns the rating analysis of the product pricing data
+      responses:
+        '200':
+          description: Success
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                rate:
+                  type: number
+                num_products:
+                  type: number
+                avg_first_price:
+                  type: number
+                avg_last_price:
+                  type: number
+                avg_rate_count:
+                  type: number
+                avg_comment_count:
+                  type: number
+  /analysis/rate_count:
+    get:
+      summary: Rate Count Analysis
+      description: Returns the Count of how many users rated this product
+      responses:
+        '200':
+          description: Success
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                rate_count:
+                  type: number
+                num_products:
+                  type: number
+                avg_first_price:
+                  type: number
+                avg_last_price:
+                  type: number
+                avg_rating:
+                  type: number
+                avg_comment_count:
+                  type: number
