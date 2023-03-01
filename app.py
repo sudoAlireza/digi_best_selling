@@ -21,12 +21,12 @@ mysql_host = os.getenv('MYSQL_HOST')
 mysql_port = int(os.getenv('MYSQL_PORT'))
 mysql_user = os.getenv('MYSQL_USER')
 mysql_password = os.getenv('MYSQL_PASSWORD')
-mysql_database = os.getenv('MYSQL_PASSWORD')
+mysql_database = 'best_selling_db'
 
 cnx = mysql.connector.connect(user=mysql_user,
                               password=mysql_password,
                               host='localhost',
-                              database='best_selling_db')
+                              database=mysql_database)
 
 cursor = cnx.cursor()
 
